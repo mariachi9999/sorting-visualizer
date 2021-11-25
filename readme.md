@@ -7,7 +7,7 @@ Into this project we're seeking to offer our customers a tool which can sort ele
 
 ## Implementation
 
-We'll use Angular, Node.js and Express.
+We'll use Vue.js, Node.js and Express.
 
 ## Actual Status
 
