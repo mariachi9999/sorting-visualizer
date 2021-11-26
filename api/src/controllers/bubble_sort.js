@@ -1,9 +1,11 @@
 async function bubble_sort(req, res, next) {
   //receives an array of numbers => [  1, 11, 12, 90, 3,  8,  2]
   let inputArr = req.body;
+  let responseArr = [[...req.body]];
 
   let sortAlgo = (inputArr) => {
     let len = inputArr.length;
+    let stepArr;
     let checked;
     do {
       checked = false;
@@ -12,6 +14,8 @@ async function bubble_sort(req, res, next) {
           let tmp = inputArr[i];
           inputArr[i] = inputArr[i + 1];
           inputArr[i + 1] = tmp;
+          stepArr = [...inputArr];
+          responseArr.push(stepArr);
           checked = true;
         }
       }
@@ -22,7 +26,7 @@ async function bubble_sort(req, res, next) {
   let outputArray = await sortAlgo(inputArr);
 
   try {
-    res.json({ response: outputArray });
+    res.json({ response: responseArr });
   } catch (error) {
     res.send(error);
   }
