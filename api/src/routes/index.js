@@ -4,6 +4,7 @@ const { heap_sort } = require("../controllers/heap_sort.js");
 const { insertion_sort } = require("../controllers/insertion_sort.js");
 const { merge_sort } = require("../controllers/merge_sort.js");
 const { quick_sort } = require("../controllers/quick_sort.js");
+const { selection_sort } = require("../controllers/selection_sort.js");
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -17,5 +18,6 @@ router.post("/heap", heap_sort);
 router.post("/insertion", insertion_sort);
 router.post("/merge", merge_sort);
 router.post("/quick", quick_sort);
+router.post("/selection", selection_sort);
 
 module.exports = router;
