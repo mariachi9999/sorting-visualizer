@@ -1,3 +1,5 @@
+let database = require("../../database/database");
+
 async function merge_sort(req, res, next) {
   //receives an array of numbers => [  1, 11, 12, 90, 3,  8,  2]
   let inputArr = req.body;
@@ -85,8 +87,13 @@ async function merge_sort(req, res, next) {
 
   let outputArray = await sortAlgo(inputArr);
 
+  let response = {
+    sortedArr: responseArr,
+    algoInfo: database.database.merge_sort,
+  };
+
   try {
-    res.json({ response: responseArr });
+    res.json({ response: response });
   } catch (error) {
     res.send(error);
   }

@@ -1,4 +1,7 @@
+let database = require("../../database/database");
+
 async function selection_sort(req, res, next) {
+  console.log(database.database.selection_sort);
   //receives an array of numbers => [  1, 11, 12, 90, 3,  8,  2]
   let inputArr = req.body;
   let responseArr = [[...req.body]];
@@ -37,8 +40,13 @@ async function selection_sort(req, res, next) {
 
   let outputArray = await sortAlgo(inputArr);
 
+  let response = {
+    sortedArr: responseArr,
+    algoInfo: database.database.selection_sort,
+  };
+
   try {
-    res.json({ response: responseArr });
+    res.json({ response: response });
   } catch (error) {
     res.send(error);
   }

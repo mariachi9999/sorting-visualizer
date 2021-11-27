@@ -60,3 +60,7 @@ const database = {
     method: "Selection",
   },
 };
+
+module.exports = {
+  database,
+};
