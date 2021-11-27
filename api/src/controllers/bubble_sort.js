@@ -14,7 +14,9 @@ async function bubble_sort(req, res, next) {
           let tmp = inputArr[i];
           inputArr[i] = inputArr[i + 1];
           inputArr[i + 1] = tmp;
+          // print a copy the array after the iteration
           stepArr = [...inputArr];
+          // save an snapshot of the array after the iteration
           responseArr.push(stepArr);
           checked = true;
         }
