@@ -1,39 +1,32 @@
 :root {
-
-    --primary: #2A9D8F;
-    --background: #E9C46A;
-    --header: #264653;
-    --secondary: #E76F51;
-    --white: #EFEFEF
-
+  --primary: #2a9d8f;
+  --background: #e9c46a;
+  --header: #264653;
+  --secondary: #e76f51;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    color: var(--primary);
+  margin: 0;
+  padding: 0;
+  color: var(--primary);
 }
 
 body {
-    background: var(--background);
+  background: var(--background);
 }
 
-button, .btn{
-    border-radius: 8px;
-    border: 0;
-    padding: 8px 12px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-input, textarea {
-    border: 0;
-    border-bottom: 1px solid;
-    padding: 10px;
-    outline: none;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 20px auto;
-    background-color: var(--white);
+input,
+textarea {
+  border: 0;
+  border-bottom: 1px solid;
+  padding: 10px;
+  outline: none;
+  flex-basis: 100%;
+  min-height: 100%;
+  margin: 20px;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 27px;
+  color: var(--primary);
 }
