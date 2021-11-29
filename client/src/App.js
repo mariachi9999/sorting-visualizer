@@ -7,6 +7,7 @@ import SelectSort from "./components/SelectSort/SelectSort";
 import OutputValues from "./components/OutputValues/OutputValues";
 import ButtonSort from "./components/ButtonSort/ButtonSort";
 import ButtonClear from "./components/ButtonClear/ButtonClear";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <OutputValues />
       <ButtonSort />
       <ButtonClear />
+      <Footer />
     </div>
   );
 }
