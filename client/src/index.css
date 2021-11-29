@@ -34,12 +34,10 @@ code {
   padding: 0px 40px;
   top: 0px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   padding: 15px;
@@ -58,8 +56,10 @@ textarea {
   background-color: whitesmoke;
   border-style: solid;
   border-width: 2px;
+  border-radius: 5px;
   font-size: 27px;
   color: var(--primary);
+  resize: none;
 }
 
 .container-box1 {
@@ -70,7 +70,7 @@ textarea {
 
 .container-box2 {
   display: flex;
-  top: 0px;
+  top: 0;
   flex-direction: column;
 }
 
@@ -78,6 +78,12 @@ textarea {
   display: flex;
   justify-content: space-between;
   min-height: 100%;
+}
+
+.container-buttons{
+  display: flex;
+  flex-basis: 50%;
+  height: 1em;
 }
 
 

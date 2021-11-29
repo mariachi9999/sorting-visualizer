@@ -18,6 +18,7 @@ function InputValues({ setState, inputValues }) {
         value={inputValues}
         onChange={handleChange}
         placeholder={`Enter comma separated numbers`}
+        class={styles.text}
       ></textarea>
     </div>
   );

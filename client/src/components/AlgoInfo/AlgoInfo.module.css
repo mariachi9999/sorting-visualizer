@@ -1,8 +1,6 @@
-#container {
-}
+
 .text {
   border: 0;
-  border-bottom: 1px solid;
   outline: none;
   flex-basis: 100%;
   margin: 20px;
@@ -13,14 +11,12 @@
   color: var(--primary);
   text-align: justify;
   padding: 10px;
-  min-height: 300px;
+  min-height: 421px;
+  border-radius: 5px;
 }
 
 .title {
   text-align: start;
   font-size: 24px;
-  padding-top: 0px;
 }
 
-#empty {
-}

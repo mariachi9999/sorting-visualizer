@@ -1,14 +1,18 @@
 .name {
   color: var(--background);
+  align-items: left;
+  padding:  0px 10px;
 }
 
 .icon {
   color: var(--background);
   margin-left: 20px;
+  font-size: 80px;
 }
 
 .about {
-  position: relative;
+  position: absolute;
+  right: 2em;
   align-items: right;
   color: var(--background);
 }
