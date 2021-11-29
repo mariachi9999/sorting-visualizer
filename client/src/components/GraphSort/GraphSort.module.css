@@ -2,3 +2,17 @@
   display: flex;
   justify-content: space-around;
 }
+
+.graphContainer {
+  border: 0;
+  border-bottom: 1px solid;
+  padding: 10px 100px;
+  outline: none;
+  flex-basis: 42%;
+  margin-right: 20px;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 2px;
+  color: var(--primary);
+  text-align: justify;
+}

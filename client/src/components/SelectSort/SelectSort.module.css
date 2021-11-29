@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.container{
+.container {
   border: 0;
   border-bottom: 1px solid;
   padding: 10px;
@@ -16,6 +16,9 @@
   border-width: 2px;
   font-size: 27px;
   color: var(--primary);
-  text-align: left;
-  
+  text-align: justify;
+}
+
+.input{
+  text-align: justify;
 }

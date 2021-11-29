@@ -26,7 +26,6 @@ code {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-
 }
 
 .header {
@@ -53,10 +52,8 @@ input,
 textarea {
   border: 0;
   border-bottom: 1px solid;
-  padding: 10px;
   outline: none;
   flex-basis: 100%;
-  min-height: 100%;
   margin: 20px;
   background-color: whitesmoke;
   border-style: solid;
