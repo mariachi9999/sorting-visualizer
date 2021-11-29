@@ -24,17 +24,29 @@ code {
   padding: 20px 30px;
   top: 0px;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
+
 }
 
 .header {
   background: var(--header);
-  padding: 20px 30px;
+  padding: 0px 30px;
   top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #264653;
+  text-align: center;
+  color: var(--background);
 }
 
 input,
@@ -57,21 +69,17 @@ textarea {
   display: flex;
   flex-basis: 30%;
   flex-direction: column;
-  padding: 10px 10px;
   min-height: 100%;
 }
 
 .container-box2 {
-  display: flex;
+  top: 0px;
   flex-direction: column;
-  padding: 10px 10px;
-  flex-basis: 70%;
-  min-height: 100%;
 }
 
 .container-box3 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: 100%;
   flex-basis: 100%;
 }

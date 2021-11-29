@@ -11,29 +11,35 @@ function AlgoInfo() {
         ducimus eaque error, corrupti quos! Ullam molestias accusamus
         praesentium nihil assumenda.
       </p>
-      <div>
-        <span>Best: </span>
-        <p>Value</p>
-      </div>
-      <div>
-        <span>Average: </span>
-        <p>Value</p>
-      </div>
-      <div>
-        <span>Worst: </span>
-        <p>Value</p>
-      </div>
-      <div>
-        <span>Memory: </span>
-        <p>Value</p>
-      </div>
-      <div>
-        <span>Stability: </span>
-        <p>Value</p>
-      </div>
-      <div>
-        <span>Method: </span>
-        <p>Value</p>
+      <div className="container">
+        <div className="container-box1">
+          <div>
+            <span>Best: </span>
+            <p>Value</p>
+          </div>
+          <div>
+            <span>Average: </span>
+            <p>Value</p>
+          </div>
+          <div>
+            <span>Worst: </span>
+            <p>Value</p>
+          </div>
+        </div>
+        <div className="container-box1">
+          <div>
+            <span>Memory: </span>
+            <p>Value</p>
+          </div>
+          <div>
+            <span>Stability: </span>
+            <p>Value</p>
+          </div>
+          <div>
+            <span>Method: </span>
+            <p>Value</p>
+          </div>
+        </div>
       </div>
     </div>
   );

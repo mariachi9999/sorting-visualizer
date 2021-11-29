@@ -36,8 +36,10 @@ function App() {
         <div class="container-box1">
           <InputValues inputValues={state.inputValues} setState={setState} />
           <SelectSort setState={setState} />
-          <ButtonSort sortClick={sortClick} />
-          <ButtonClear clearClick={clearClick} />
+          <div className="container-box3">
+            <ButtonSort sortClick={sortClick} />
+            <ButtonClear clearClick={clearClick} />
+          </div>
         </div>
         <div class="container-box2">
           <AlgoInfo outputValues={state.outputValues} />
