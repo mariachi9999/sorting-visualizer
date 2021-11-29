@@ -2,84 +2,104 @@ import React from "react";
 import styles from "./GraphSort.module.css";
 import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
-import { useState, useEffect } from "react";
+import Chartjs from "chart.js/auto";
+import { useState, useEffect, useRef } from "react";
 
-function GraphSort({ outputValues }) {
-  const [title, setTitle] = useState(outputValues?.algoInfo?.title || "Sort");
-  const [operations, setOperations] = useState(outputValues?.sortedArr || []);
-  const [iteration, setIteration] = useState(0);
+const randomInt = () => Math.floor(Math.random() * (10 - 1 + 1)) + 1;
 
-  const [state, setState] = useState({
-    labels: ["0", "1", "2", "3", "4"],
+const chartConfig = {
+  type: "bar",
+  data: {
+    labels: ["1", "2", "3", "4", "5", "6"],
     datasets: [
       {
-        label: "Sorting",
-        backgroundColor: "rgba(75,192,192,1)",
-        borderColor: "rgba(0,0,0,1)",
-        borderWidth: 2,
-        data: [0, 0, 0, 0, 0],
+        label: "Sorting Algorithm",
+        data: [1, 2, 3, 4, 5, 6],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(255, 206, 86, 0.2)",
+          "rgba(75, 192, 192, 0.2)",
+          "rgba(153, 102, 255, 0.2)",
+          "rgba(255, 159, 64, 0.2)",
+        ],
+        borderColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 206, 86, 1)",
+          "rgba(75, 192, 192, 1)",
+          "rgba(153, 102, 255, 1)",
+          "rgba(255, 159, 64, 1)",
+        ],
+        borderWidth: 1,
       },
     ],
-  });
-
-  useEffect(() => {
-    let newlabels = [];
-    if (operations[0]?.length) {
-      for (let i = 0; i < operations[0].length; i++) {
-        newlabels.push(i + 1);
-      }
-      setState((prevState) => {
-        return {
-          ...prevState,
-          labels: newlabels,
-        };
-      });
-    }
-  }, [operations]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      iteration < operations?.length &&
-        setIteration((prevState) => prevState + 1);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [state.labels]);
-
-  useEffect(() => {
-    setState((prevState) => {
-      return {
-        ...prevState,
-        datasets: [
-          {
-            label: "Sorting",
-            backgroundColor: "rgba(75,192,192,1)",
-            borderColor: "rgba(0,0,0,1)",
-            borderWidth: 2,
-            data: operations[iteration],
+  },
+  options: {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
           },
-        ],
-      };
-    });
-  }, [iteration]);
+        },
+      ],
+    },
+  },
+};
+
+const GraphSort = ({ outputValues }) => {
+  console.log(outputValues);
+  const chartContainer = useRef(null);
+  const [chartInstance, setChartInstance] = useState(null);
+  const [pointer, setPointer] = useState(0);
+
+  useEffect(() => {
+    if (chartContainer && chartContainer.current) {
+      const newChartInstance = new Chartjs(chartContainer.current, chartConfig);
+      setChartInstance(newChartInstance);
+    }
+  }, [chartContainer]);
+
+  const updateDataset = (datasetIndex, newData, step) => {
+    chartInstance.data.labels = newData;
+    chartInstance.data.datasets[datasetIndex].data = newData;
+    chartInstance.data.datasets[datasetIndex].label = `Step: ${step}`;
+    chartInstance.update();
+  };
+
+  const onButtonClick = () => {
+    let data = [];
+    if (outputValues !== undefined && outputValues.length > 0) {
+      data = outputValues[pointer];
+      updateDataset(0, data, pointer + 1);
+      setPointer((prevPointer) => {
+        if (prevPointer < outputValues.length - 1) {
+          return prevPointer + 1;
+        } else {
+          return 0;
+        }
+      });
+    } else {
+      console.log("enter to random");
+      data = [
+        randomInt(),
+        randomInt(),
+        randomInt(),
+        randomInt(),
+        randomInt(),
+        randomInt(),
+      ];
+      updateDataset(0, data, 1);
+    }
+  };
 
   return (
-    <div className={styles.graphContainer}>
-      <Bar
-        data={state}
-        options={{
-          title: {
-            display: true,
-            text: "Average Rainfall per month",
-            fontSize: 20,
-          },
-          legend: {
-            display: true,
-            position: "right",
-          },
-        }}
-      />
+    <div>
+      <button onClick={onButtonClick}>Next Step!</button>
+      <canvas ref={chartContainer} />
     </div>
   );
-}
+};
 
 export default GraphSort;

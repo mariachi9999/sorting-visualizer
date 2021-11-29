@@ -55,7 +55,7 @@ function App() {
           <AlgoInfo outputValues={state.outputValues} />
           <div class="container-box3">
             <OutputValues outputValues={state.outputValues} />
-            <GraphSort outputValues={state.outputValues} />
+            <GraphSort outputValues={state.outputValues.sortedArr} />
           </div>
         </div>
       </div>
