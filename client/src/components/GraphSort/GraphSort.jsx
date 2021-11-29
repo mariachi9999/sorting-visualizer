@@ -4,57 +4,63 @@ import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { useState, useEffect } from "react";
 
-// const state = {
-//   labels: ["January", "February", "March", "April", "May"],
-//   datasets: [
-//     {
-//       label: "Rainfall",
-//       backgroundColor: "rgba(75,192,192,1)",
-//       borderColor: "rgba(0,0,0,1)",
-//       borderWidth: 2,
-//       data: [65, 59, 80, 81, 56],
-//     },
-//   ],
-// };
-
 function GraphSort({ outputValues }) {
-  let title = outputValues?.algoInfo?.title || "Sort";
-  let operations = outputValues?.sortedArr || [];
-  console.log(operations);
-
-  useEffect(() => {
-    operations.forEach((operation) => {
-      let labels = [];
-      for (let i = 0; i < operation.length; i++) {
-        labels.push(i + 1);
-      }
-      setState({
-        labels: labels,
-        datasets: [
-          {
-            label: title,
-            backgroundColor: "rgba(75,192,192,1)",
-            borderColor: "rgba(0,0,0,1)",
-            borderWidth: 2,
-            data: operation,
-          },
-        ],
-      });
-    });
-  }, [operations]);
+  const [title, setTitle] = useState(outputValues?.algoInfo?.title || "Sort");
+  const [operations, setOperations] = useState(outputValues?.sortedArr || []);
+  const [iteration, setIteration] = useState(0);
 
   const [state, setState] = useState({
-    labels: ["January", "February", "March", "April", "May"],
+    labels: ["0", "1", "2", "3", "4"],
     datasets: [
       {
-        label: "Rainfall",
+        label: "Sorting",
         backgroundColor: "rgba(75,192,192,1)",
         borderColor: "rgba(0,0,0,1)",
         borderWidth: 2,
-        data: [65, 59, 80, 81, 56],
+        data: [0, 0, 0, 0, 0],
       },
     ],
   });
+
+  useEffect(() => {
+    let newlabels = [];
+    if (operations[0]?.length) {
+      for (let i = 0; i < operations[0].length; i++) {
+        newlabels.push(i + 1);
+      }
+      setState((prevState) => {
+        return {
+          ...prevState,
+          labels: newlabels,
+        };
+      });
+    }
+  }, [operations]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      iteration < operations?.length &&
+        setIteration((prevState) => prevState + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [state.labels]);
+
+  useEffect(() => {
+    setState((prevState) => {
+      return {
+        ...prevState,
+        datasets: [
+          {
+            label: "Sorting",
+            backgroundColor: "rgba(75,192,192,1)",
+            borderColor: "rgba(0,0,0,1)",
+            borderWidth: 2,
+            data: operations[iteration],
+          },
+        ],
+      };
+    });
+  }, [iteration]);
 
   return (
     <div className={styles.graphContainer}>
