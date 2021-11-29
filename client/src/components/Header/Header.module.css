@@ -15,5 +15,18 @@
   right: 2em;
   align-items: right;
   color: var(--background);
+}
 
+#namelogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
 }
