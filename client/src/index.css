@@ -29,6 +29,7 @@ code {
 }
 
 .header {
+  display: flex;
   background: var(--header);
   padding: 0px 40px;
   top: 0px;
@@ -79,4 +80,17 @@ textarea {
   min-height: 100%;
   flex-basis: 100%;
 }
+
+.checkboxes input{
+  margin: 0px 0px 0px 0px;
+}
+
+.checkboxes label{
+  margin: 0px 20px 0px 3px;
+}
+
+.input{
+  text-align: justify;
+}
+
 
