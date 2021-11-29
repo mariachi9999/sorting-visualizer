@@ -4,7 +4,9 @@ import styles from "./ButtonSort.module.css";
 function ButtonSort({ sortClick }) {
   return (
     <div id={styles.container}>
-      <button onClick={sortClick}  className={styles.btn} >SORT</button>
+      <button onClick={sortClick} className={styles.btn}>
+        SORT
+      </button>
     </div>
   );
 }
