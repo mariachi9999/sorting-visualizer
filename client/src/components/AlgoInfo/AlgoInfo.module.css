@@ -13,6 +13,7 @@
   color: var(--primary);
   text-align: justify;
   padding: 10px;
+  min-height: 450px;
 }
 
 .title {
