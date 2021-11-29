@@ -11,5 +11,10 @@
   position: relative;
   align-items: right;
   color: var(--background);
+}
 
+#namelogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
