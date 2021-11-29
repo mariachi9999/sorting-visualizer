@@ -25,6 +25,16 @@ function SelectSort({ setState, selectedSort }) {
 
   const limpiar = () => {
     console.log("limpiar");
+    if (selectedSort === "") {
+      setBox({
+        Bubble: false,
+        Heap: false,
+        Insertion: false,
+        Merge: false,
+        Quick: false,
+        Selection: false,
+      });
+    }
     if (selectedSort === "Bubble") {
       setBox({
         Bubble: true,
