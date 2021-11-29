@@ -2,6 +2,7 @@ let database = require("../../database/database");
 
 async function bubble_sort(req, res, next) {
   //receives an array of numbers => [  1, 11, 12, 90, 3,  8,  2]
+  console.log(req.body);
   let inputArr = req.body;
   let responseArr = [[...req.body]];
 

@@ -9,6 +9,7 @@ import ButtonClear from "./components/ButtonClear/ButtonClear";
 import Footer from "./components/Footer/Footer";
 import GraphSort from "./components/GraphSort/GraphSort";
 import { useState } from "react";
+import axios from "axios";
 
 function App() {
   const [state, setState] = useState({
@@ -17,8 +18,17 @@ function App() {
     outputValues: [],
   });
 
-  const sortClick = () => {
-    console.log("click on sort button");
+  const sortClick = async () => {
+    let route = state.selectedSort.toLowerCase();
+    let split = state.inputValues.split(",");
+    let body = split.map((stringNumber) => Number(stringNumber));
+    let response = await axios.post(`http://localhost:3001/${route}`, body);
+    setState((prevState) => {
+      return {
+        ...prevState,
+        outputValues: response.data.response,
+      };
+    });
   };
 
   const clearClick = () => {
