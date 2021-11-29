@@ -12,10 +12,12 @@
   border-width: 2px;
   font-size: 16px;
   color: var(--primary);
-  text-align: left;
+  text-align: justify;
   padding: 10px;
 }
 
 .title {
+  text-align: start;
   font-size: 24px;
+  padding-top: 0px;
 }

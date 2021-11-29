@@ -3,7 +3,7 @@ import styles from "./OutputValues.module.css";
 
 function OutputValues() {
   return (
-    <div id={styles.container}>
+    <div id={styles.container} >
       <textarea></textarea>
     </div>
   );

@@ -17,7 +17,7 @@ const state = {
 
 function GraphSort({ chartData }) {
   return (
-    <div>
+    <div className={styles.graphContainer}>
       <Bar
         data={state}
         options={{
