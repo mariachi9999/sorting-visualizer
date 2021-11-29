@@ -1,14 +1,9 @@
 .name {
   color: var(--background);
 }
-.logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .icon {
-  max-height: 10px;
-  padding-right: 20px;
+  color: var(--background);
 }
 
 .about {

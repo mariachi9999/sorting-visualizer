@@ -30,7 +30,7 @@ code {
 
 .header {
   background: var(--header);
-  padding: 0px 30px;
+  padding: 0px 40px;
   top: 0px;
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,7 @@ textarea {
 
 .container-box1 {
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 50%;
   flex-direction: column;
   min-height: 100%;
 }
