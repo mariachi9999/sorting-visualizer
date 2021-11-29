@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div id={styles.container} className="header">
-      <Link to={`/`}>
+      <Link to={`/`} id={styles.namelogo}>
         <div id={styles.namelogo}>
           <span>
             <CalculateIcon className={styles.icon} sx={{ fontSize: 80 }} />
@@ -14,7 +14,7 @@ function Header() {
           <h1 className={styles.name}>Algorithm Visualizer</h1>
         </div>
       </Link>
-      <Link to={`/about`}>
+      <Link to={`/about`} id={styles.about}>
         <h2 className={styles.about}>About Us</h2>
       </Link>
     </div>

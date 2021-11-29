@@ -17,4 +17,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none !important;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
 }
