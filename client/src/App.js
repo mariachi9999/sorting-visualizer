@@ -29,19 +29,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <InputValues setState={setState} />
-      <AlgoInfo outputValues={state.outputValues} />
-      <SelectSort setState={setState} />
-      <OutputValues outputValues={state.outputValues} />
-      <ButtonSort sortClick={sortClick} />
-      <ButtonClear clearClick={clearClick} />
-      <GraphSort outputValues={state.outputValues} />
       <div class="container">
         <div class="container-box1">
           <InputValues setState={setState} />
           <SelectSort setState={setState} />
-          <ButtonSort />
-          <ButtonClear />
+          <ButtonSort sortClick={sortClick} />
+          <ButtonClear clearClick={clearClick} />
         </div>
         <div class="container-box2">
           <AlgoInfo outputValues={state.outputValues} />
