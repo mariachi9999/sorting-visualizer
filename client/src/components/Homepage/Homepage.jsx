@@ -30,7 +30,7 @@ function Homepage() {
       let split = state.inputValues.split(",");
       let body = split.map((stringNumber) => Number(stringNumber));
       let response = await axios.post(
-        `https://sort-visualizer-jala.herokuapp.com/${route}`,
+        `http://sort-visualizer-jala.herokuapp.com/${route}`,
         body
       );
       setState((prevState) => {
