@@ -22,7 +22,11 @@ function App() {
   };
 
   const clearClick = () => {
-    console.log("click on clear button");
+    setState({
+      inputValues: [],
+      selectedSort: "",
+      outputValues: [],
+    });
   };
 
   return (
