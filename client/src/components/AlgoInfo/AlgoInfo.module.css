@@ -1,2 +1,22 @@
 #container {
 }
+
+.text {
+    border: 0;
+    border-bottom: 1px solid;
+    outline: none;
+    flex-basis: 100%;
+    min-height: 100%;
+    margin: 20px;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 16px;
+    color: var(--primary);
+    text-align: left;
+    
+}
+
+.title{
+    font-size: 24px;
+}

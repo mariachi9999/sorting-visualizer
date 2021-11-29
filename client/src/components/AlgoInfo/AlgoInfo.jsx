@@ -3,8 +3,8 @@ import styles from "./AlgoInfo.module.css";
 
 function AlgoInfo() {
   return (
-    <div id={styles.container}>
-      <h6>Algorithm Title</h6>
+    <div id={styles.container} className={styles.text}>
+      <h6 className={styles.title}>Algorithm Title</h6>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto commodi
         dolorum, optio esse excepturi dicta aspernatur dolor molestiae sequi

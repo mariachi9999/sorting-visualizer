@@ -4,8 +4,8 @@ import CalculateIcon from "@mui/icons-material/Calculate";
 
 function Footer() {
   return (
-    <div id={styles.container}>
-      <span>Made with 💛 for Jalasoft</span>
+    <div id={styles.container} className={styles.footer}>
+      <span className={styles.text}>Made with 💛 for Jalasoft</span>
     </div>
   );
 }
