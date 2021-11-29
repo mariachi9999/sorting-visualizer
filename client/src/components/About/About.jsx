@@ -1,10 +1,17 @@
-import "./About.module.css";
+import styles from "./About.module.css";
+import jorge from "../../assets/jorge.jpg";
+import nico from "../../assets/nico.jpg";
 
 function About() {
   return (
-    <div className="About">
-      <div class="container">
-        <h1>About</h1>
+    <div id={styles.container}>
+      <div id={styles.leftSide}>
+        <img src={jorge} alt="jorge" className={styles.img}></img>
+        <h2 className={styles.names}>JORGE CHAIN LOPEZ</h2>
+      </div>
+      <div id={styles.rightSide}>
+        <img src={nico} alt="nico" className={styles.img}></img>
+        <h2 className={styles.names}>NICOLAS LUPO</h2>
       </div>
     </div>
   );
