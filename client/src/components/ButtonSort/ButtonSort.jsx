@@ -3,8 +3,10 @@ import styles from "./ButtonSort.module.css";
 
 function ButtonSort({ sortClick }) {
   return (
-    <div id={styles.container} className={styles.btn}>
-      <button onClick={sortClick}>SORT</button>
+    <div id={styles.container}>
+      <button onClick={sortClick} className={styles.btn}>
+        SORT
+      </button>
     </div>
   );
 }

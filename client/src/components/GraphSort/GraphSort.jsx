@@ -96,7 +96,9 @@ const GraphSort = ({ outputValues }) => {
 
   return (
     <div>
-      <button onClick={onButtonClick}>Next Step!</button>
+      <button onClick={onButtonClick} className={styles.btn}>
+        Next Step!
+      </button>
       <canvas ref={chartContainer} />
     </div>
   );
