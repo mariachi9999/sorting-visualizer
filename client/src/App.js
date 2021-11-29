@@ -36,6 +36,21 @@ function App() {
       <ButtonSort sortClick={sortClick} />
       <ButtonClear clearClick={clearClick} />
       <GraphSort outputValues={state.outputValues} />
+      <div class="container">
+        <div class="container-box1">
+          <InputValues setState={setState} />
+          <SelectSort setState={setState} />
+          <ButtonSort />
+          <ButtonClear />
+        </div>
+        <div class="container-box2">
+          <AlgoInfo outputValues={state.outputValues} />
+          <div class="container-box3">
+            <OutputValues outputValues={state.outputValues} />
+            <GraphSort outputValues={state.outputValues} />
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );
