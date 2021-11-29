@@ -3,7 +3,7 @@ import styles from "./SelectSort.module.css";
 
 function SelectSort() {
   return (
-    <div id={styles.container}>
+    <div id={styles.container} className={styles.container}>
       <form id={styles.form}>
         <label>
           Bubble Sort

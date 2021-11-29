@@ -3,7 +3,7 @@ import styles from "./ButtonClear.module.css";
 
 function ButtonClear() {
   return (
-    <div id={styles.container}>
+    <div id={styles.container} className={styles.btn}>
       <button>CLEAR</button>
     </div>
   );
