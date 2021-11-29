@@ -6,7 +6,7 @@ function Header() {
   return (
     <div id={styles.container} className="header" >
       <span>
-        <CalculateIcon />
+        <CalculateIcon className="icon"/>
       </span>
       <h1 className={styles.name}>Algorithm Visualizer</h1>
       <h2 className={styles.about}>About Us</h2>

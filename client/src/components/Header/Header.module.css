@@ -1,5 +1,5 @@
 .name {
-  color: #e9c46a;
+  color: var(--background);
 }
 .logo {
   display: flex;
@@ -7,11 +7,12 @@
   align-items: center;
 }
 .icon {
-  max-height: 60px;
+  max-height: 10px;
   padding-right: 20px;
 }
+
 .about {
   position: relative;
   align-items: right;
-  color: #e9c46a;
+  color: var(--background);
 }
