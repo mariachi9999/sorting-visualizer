@@ -31,7 +31,7 @@ function App() {
       <Header />
       <div class="container">
         <div class="container-box1">
-          <InputValues setState={setState} />
+          <InputValues inputValues={state.inputValues} setState={setState} />
           <SelectSort setState={setState} />
           <ButtonSort sortClick={sortClick} />
           <ButtonClear clearClick={clearClick} />

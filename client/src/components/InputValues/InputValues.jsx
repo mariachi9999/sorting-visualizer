@@ -1,10 +1,20 @@
 import React from "react";
 import styles from "./InputValues.module.css";
 
-function InputValues() {
+function InputValues({ setState, inputValues }) {
+  const handleChange = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    setState((prevState) => {
+      return {
+        ...prevState,
+        inputValues: e.target.value,
+      };
+    });
+  };
   return (
     <div id={styles.container}>
-      <textarea></textarea>
+      <textarea value={inputValues} onChange={handleChange}></textarea>
     </div>
   );
 }
