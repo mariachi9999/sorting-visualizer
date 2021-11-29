@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./ButtonClear.module.css";
 
-function ButtonClear() {
+function ButtonClear({ clearClick }) {
   return (
     <div id={styles.container}>
-      <button>CLEAR</button>
+      <button onClick={clearClick}>CLEAR</button>
     </div>
   );
 }

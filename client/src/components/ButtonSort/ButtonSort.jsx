@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./ButtonSort.module.css";
 
-function ButtonSort() {
+function ButtonSort({ sortClick }) {
   return (
     <div id={styles.container}>
-      <button>SORT</button>
+      <button onClick={sortClick}>SORT</button>
     </div>
   );
 }

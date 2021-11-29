@@ -18,6 +18,14 @@ function App() {
     outputValues: [],
   });
 
+  const sortClick = () => {
+    console.log("click on sort button");
+  };
+
+  const clearClick = () => {
+    console.log("click on clear button");
+  };
+
   return (
     <div className="App">
       <Header />
@@ -25,8 +33,8 @@ function App() {
       <AlgoInfo outputValues={state.outputValues} />
       <SelectSort setState={setState} />
       <OutputValues outputValues={state.outputValues} />
-      <ButtonSort />
-      <ButtonClear />
+      <ButtonSort sortClick={sortClick} />
+      <ButtonClear clearClick={clearClick} />
       <GraphSort outputValues={state.outputValues} />
       <Footer />
     </div>
