@@ -8,22 +8,31 @@ import OutputValues from "./components/OutputValues/OutputValues";
 import ButtonSort from "./components/ButtonSort/ButtonSort";
 import ButtonClear from "./components/ButtonClear/ButtonClear";
 import Footer from "./components/Footer/Footer";
+import GraphSort from "./components/GraphSort/GraphSort";
+import { useState } from "react";
 
 function App() {
+  const [state, setState] = useState({
+    inputValues: [],
+    selectedSort: "",
+    outputValues: [],
+  });
+
   return (
     <div className="App">
       <Header />
       <div class="container">
         <div class="container-box1">
-          <InputValues />
-          <SelectSort />
+          <InputValues setState={setState} />
+          <SelectSort setState={setState} />
           <ButtonSort />
           <ButtonClear />
         </div>
         <div class="container-box2">
-          <AlgoInfo />
+          <AlgoInfo outputValues={state.outputValues} />
           <div class="container-box3">
-            <OutputValues />
+            <OutputValues outputValues={state.outputValues} />
+            <GraphSort outputValues={state.outputValues} />
           </div>
         </div>
       </div>
