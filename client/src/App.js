@@ -13,22 +13,32 @@ import axios from "axios";
 
 function App() {
   const [state, setState] = useState({
-    inputValues: [],
+    inputValues: "",
     selectedSort: "",
     outputValues: [],
   });
 
   const sortClick = async () => {
-    let route = state.selectedSort.toLowerCase();
-    let split = state.inputValues.split(",");
-    let body = split.map((stringNumber) => Number(stringNumber));
-    let response = await axios.post(`http://localhost:3001/${route}`, body);
-    setState((prevState) => {
-      return {
-        ...prevState,
-        outputValues: response.data.response,
-      };
-    });
+    if (state.selectedSort === "") {
+      alert(
+        "Upss...it seems that you dont select an algorithm! Pick one, please!"
+      );
+    } else if (state.inputValues === "") {
+      alert(
+        "Upss...it seems that you dont add numbers on input checkbox! Do it, please!"
+      );
+    } else {
+      let route = state.selectedSort.toLowerCase();
+      let split = state.inputValues.split(",");
+      let body = split.map((stringNumber) => Number(stringNumber));
+      let response = await axios.post(`http://localhost:3001/${route}`, body);
+      setState((prevState) => {
+        return {
+          ...prevState,
+          outputValues: response.data.response,
+        };
+      });
+    }
   };
 
   const clearClick = () => {
