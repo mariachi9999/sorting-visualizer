@@ -29,7 +29,10 @@ function Homepage() {
       let route = state.selectedSort.toLowerCase();
       let split = state.inputValues.split(",");
       let body = split.map((stringNumber) => Number(stringNumber));
-      let response = await axios.post(`http://localhost:3001/${route}`, body);
+      let response = await axios.post(
+        `https://sort-visualizer-jala.herokuapp.com/${route}`,
+        body
+      );
       setState((prevState) => {
         return {
           ...prevState,
