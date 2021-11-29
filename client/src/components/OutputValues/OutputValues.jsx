@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./InputValues.module.css";
+import styles from "./OutputValues.module.css";
 
-function InputValues() {
+function OutputValues() {
   return (
     <div id={styles.container}>
       <textarea></textarea>
@@ -9,4 +9,4 @@ function InputValues() {
   );
 }
 
-export default InputValues;
+export default OutputValues;
