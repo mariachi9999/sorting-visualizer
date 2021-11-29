@@ -4,12 +4,12 @@ import CalculateIcon from "@mui/icons-material/Calculate";
 
 function Header() {
   return (
-    <div id={styles.container}>
+    <div id={styles.container} className="header" >
       <span>
         <CalculateIcon />
       </span>
-      <h1>Algorithm Visualizer</h1>
-      <h2>About Us</h2>
+      <h1 className={styles.name}>Algorithm Visualizer</h1>
+      <h2 className={styles.about}>About Us</h2>
     </div>
   );
 }

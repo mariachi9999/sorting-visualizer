@@ -13,12 +13,20 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <InputValues />
-      <AlgoInfo />
-      <SelectSort />
-      <OutputValues />
-      <ButtonSort />
-      <ButtonClear />
+      <div class="container">
+        <div class="container-box1">
+          <InputValues />
+          <SelectSort />
+          <ButtonSort />
+          <ButtonClear />
+        </div>
+        <div class="container-box2">
+          <AlgoInfo />
+          <div class="container-box3">
+            <OutputValues />
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );
