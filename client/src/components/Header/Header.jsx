@@ -6,7 +6,7 @@ function Header() {
   return (
     <div id={styles.container} className="header">
       <span>
-        <CalculateIcon className={styles.icon} sx={{ fontSize: 60 }} />
+        <CalculateIcon className={styles.icon} sx={{ fontSize: 80 }} />
       </span>
       <h1 className={styles.name}>Algorithm Visualizer</h1>
       <h2 className={styles.about}>About Us</h2>

@@ -4,10 +4,12 @@
 
 .icon {
   color: var(--background);
+  margin-left: 20px;
 }
 
 .about {
   position: relative;
   align-items: right;
   color: var(--background);
+
 }
