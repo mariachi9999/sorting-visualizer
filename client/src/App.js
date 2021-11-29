@@ -10,6 +10,9 @@ import Footer from "./components/Footer/Footer";
 import GraphSort from "./components/GraphSort/GraphSort";
 import { useState } from "react";
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
+import About from "./components/About/About";
+import Homepage from "./components/Homepage/Homepage";
 
 function App() {
   const [state, setState] = useState({
@@ -52,23 +55,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div class="container">
-        <div class="container-box1">
-          <InputValues inputValues={state.inputValues} setState={setState} />
-          <SelectSort setState={setState} selectedSort={state.selectedSort} />
-          <div className="container-box3">
-            <ButtonSort sortClick={sortClick} />
-            <ButtonClear clearClick={clearClick} />
-          </div>
-        </div>
-        <div class="container-box2">
-          <AlgoInfo outputValues={state.outputValues} />
-          <div class="container-box3">
-            <OutputValues outputValues={state.outputValues} />
-            <GraphSort outputValues={state.outputValues.sortedArr} />
-          </div>
-        </div>
-      </div>
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+        <Route exact path="/about" element={<About />} />
+      </Routes>
       <Footer />
     </div>
   );
