@@ -16,6 +16,14 @@
   border-width: 2px;
   font-size: 27px;
   color: var(--primary);
-  text-align: center;
+  text-align: justify;
+}
 
+input[type="checkbox"] {
+  right: 0px;
+  top: 0px;
+  margin: 10px;
+  margin-left: 20px;
+  justify-content: space-between;
+  align-items: space-between;
 }

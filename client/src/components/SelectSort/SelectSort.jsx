@@ -102,6 +102,7 @@ function SelectSort({ setState, selectedSort }) {
   return (
     <div id={styles.container} className={styles.container}>
       <form id={styles.form}>
+        <div className="checkbox"></div>
         <label>
           Bubble Sort
           <input
