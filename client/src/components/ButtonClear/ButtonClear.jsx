@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ButtonClear.module.css";
 
+
 function ButtonClear({ clearClick }) {
   return (
     <div id={styles.container}>

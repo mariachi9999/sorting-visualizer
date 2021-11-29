@@ -46,7 +46,7 @@ function App() {
         <div class="container-box1">
           <InputValues inputValues={state.inputValues} setState={setState} />
           <SelectSort setState={setState} selectedSort={state.selectedSort} />
-          <div className="container-box3">
+          <div className="container-buttons">
             <ButtonSort sortClick={sortClick} />
             <ButtonClear clearClick={clearClick} />
           </div>

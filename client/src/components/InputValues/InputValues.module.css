@@ -1,7 +1,20 @@
 #container {
   display: flex;
-  justify-content: space-around;
-  min-height: 200px;
+  flex-direction: column;
+}
+.text {
+  border: 0;
   margin: 20px;
-
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 24px;
+  color: var(--primary);
+  text-align: justify;
+  padding: 10px;
+  min-height: 421px;
+}
+.placeholder{
+  text-align: start;
+  font-size: 24px;
 }
