@@ -4,7 +4,7 @@ import CalculateIcon from "@mui/icons-material/Calculate";
 
 function Header() {
   return (
-    <div id={styles.container} className="header" >
+    <div id={styles.container} className="header">
       <span>
         <CalculateIcon className={styles.icon} sx={{ fontSize: 60 }} />
       </span>

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SelectSort.module.css";
 import { useState, useEffect } from "react";
+import { Checkbox, FormGroup, FormControlLabel } from "@material-ui/core";
 
 function SelectSort({ setState, selectedSort }) {
   const [box, setBox] = useState({
@@ -101,68 +102,81 @@ function SelectSort({ setState, selectedSort }) {
 
   return (
     <div id={styles.container} className={styles.container}>
-      <form id={styles.form}>
-        <label>
-          Bubble Sort
-          <input
-            id="Bubble"
-            name="Bubble"
-            type="checkbox"
-            checked={box.Bubble}
-            onClick={handleClick}
-          />
-        </label>
-        <label>
-          Heap Sort
-          <input
-            id="Heap"
-            name="Heap"
-            type="checkbox"
-            checked={box.Heap}
-            onClick={handleClick}
-          />
-        </label>
-        <label>
-          Insertion Sort
-          <input
-            id="Insertion"
-            name="Insertion"
-            type="checkbox"
-            checked={box.Insertion}
-            onClick={handleClick}
-          />
-        </label>
-        <label>
-          Merge Sort
-          <input
-            id="Merge"
-            name="Merge"
-            type="checkbox"
-            checked={box.Merge}
-            onClick={handleClick}
-          />
-        </label>
-        <label>
-          Quick Sort
-          <input
-            id="Quick"
-            name="Quick"
-            type="checkbox"
-            checked={box.Quick}
-            onClick={handleClick}
-          />
-        </label>
-        <label>
-          Selection Sort
-          <input
-            id="Selection"
-            name="Selection"
-            type="checkbox"
-            checked={box.Selection}
-            onClick={handleClick}
-          />
-        </label>
-      </form>
+      <FormGroup id={styles.form}>
+        <FormControlLabel
+          control={
+            <Checkbox
+              id="Bubble"
+              name="Bubble"
+              type="checkbox"
+              checked={box.Bubble}
+              onClick={handleClick}
+            />
+          }
+          label="Bubble Sort"
+        ></FormControlLabel>
+        <FormControlLabel
+          control={
+            <Checkbox
+              id="Heap"
+              name="Heap"
+              type="checkbox"
+              checked={box.Heap}
+              onClick={handleClick}
+            />
+          }
+          label="Heap Sort"
+        ></FormControlLabel>
+        <FormControlLabel
+          control={
+            <Checkbox
+              id="Insertion"
+              name="Insertion"
+              type="checkbox"
+              checked={box.Insertion}
+              onClick={handleClick}
+            />
+          }
+          label="Insertion Sort"
+        ></FormControlLabel>
+        <FormControlLabel
+          control={
+            <Checkbox
+              id="Merge"
+              name="Merge"
+              type="checkbox"
+              checked={box.Merge}
+              onClick={handleClick}
+            />
+          }
+          label="Merge Sort"
+        ></FormControlLabel>
+        <FormControlLabel
+          control={
+            <Checkbox
+              id="Quick"
+              name="Quick"
+              type="checkbox"
+              checked={box.Quick}
+              onClick={handleClick}
+            />
+          }
+          label="Quick Sort"
+        ></FormControlLabel>
+
+        <FormControlLabel
+          control={
+            <Checkbox
+              id="Selection"
+              name="Selection"
+              type="checkbox"
+              checked={box.Selection}
+              onClick={handleClick}
+            />
+          }
+          label="Selection Sort"
+        />
+      </FormGroup>
     </div>
   );
 }

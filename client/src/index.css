@@ -66,10 +66,10 @@ textarea {
   display: flex;
   flex-basis: 50%;
   flex-direction: column;
-  min-height: 100%;
 }
 
 .container-box2 {
+  display: flex;
   top: 0px;
   flex-direction: column;
 }
@@ -78,19 +78,6 @@ textarea {
   display: flex;
   justify-content: space-between;
   min-height: 100%;
-  flex-basis: 100%;
-}
-
-.checkboxes input{
-  margin: 0px 0px 0px 0px;
-}
-
-.checkboxes label{
-  margin: 0px 20px 0px 3px;
-}
-
-.input{
-  text-align: justify;
 }
 
 
