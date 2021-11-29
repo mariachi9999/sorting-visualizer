@@ -1,6 +1,8 @@
 #container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-bottom: 4em;
 }
 
 .graphContainer {
