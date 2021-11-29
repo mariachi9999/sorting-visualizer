@@ -14,7 +14,11 @@ function InputValues({ setState, inputValues }) {
   };
   return (
     <div id={styles.container}>
-      <textarea value={inputValues} onChange={handleChange}></textarea>
+      <textarea
+        value={inputValues}
+        onChange={handleChange}
+        placeholder={`Enter comma separated numbers`}
+      ></textarea>
     </div>
   );
 }
