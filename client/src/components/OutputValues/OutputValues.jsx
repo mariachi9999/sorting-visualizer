@@ -4,7 +4,7 @@ import styles from "./OutputValues.module.css";
 function OutputValues() {
   return (
     <div id={styles.container} >
-      <textarea></textarea>
+      <textarea className={styles.outArea}></textarea>
     </div>
   );
 }
